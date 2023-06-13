@@ -19,6 +19,16 @@ function Classic() {
     setRandom(choices[randomIndex]);
   };
 
+  const checkWin = () => {
+    if (choice === 11 && random === 13) {
+      setScore(score + 1);
+    } else if (choice === 12 && random === 11) {
+      setScore(score + 1);
+    } else if (choice === 13 && random === 12) {
+      setScore(score + 1);
+    }
+  };
+
   return (
     <div className="font-montserrat h-screen w-screen ">
       <div className="h-full w-full z-0 flex flex-col justify-center items-center">
@@ -105,6 +115,7 @@ function Classic() {
                     <div
                       className="bg-white text-center px-2 py-3 mt-6 rounded-lg text-blue-600 hover:text-red-600 hover:cursor-pointer"
                       onClick={() => {
+                        checkWin();
                         setChoice(null);
                         setRandom(null);
                       }}
@@ -133,6 +144,7 @@ function Classic() {
                     <div
                       className="bg-white text-center px-2 py-3 mt-6 rounded-lg text-blue-600 hover:text-red-600 hover:cursor-pointer"
                       onClick={() => {
+                        checkWin();
                         setChoice(null);
                         setRandom(null);
                       }}
@@ -161,6 +173,7 @@ function Classic() {
                     <div
                       className="bg-white text-center px-2 py-3 mt-6 rounded-lg text-blue-600 hover:text-red-600 hover:cursor-pointer"
                       onClick={() => {
+                        checkWin();
                         setChoice(null);
                         setRandom(null);
                       }}
@@ -199,7 +212,7 @@ function Classic() {
         RULES
       </button>
       {showRules && (
-        <div className="fixed flex justify-center items-center top-0 left-0 h-screen w-screen z-[10000] bg-[#00000030]">
+        <div className="fixed flex justify-center items-center top-0 left-0 h-screen w-screen z-[10000] bg-[#00000060]">
           <div className="h-[21rem] w-[21rem] p-8 bg-white rounded-lg">
             <div className="flex justify-between">
               <div className="text-[#15193c] text-xl font-bold cursor-default">
