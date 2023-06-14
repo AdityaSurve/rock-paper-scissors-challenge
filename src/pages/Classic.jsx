@@ -79,38 +79,69 @@ function Classic() {
               <div className="flex flex-col items-center gap-5">
                 <div className="w-full text-center">YOU PICKED</div>
                 {choice === 11 && (
-                  <div className="hover:bg-gray-300  cursor-pointer hover:ring-[25px] hover:ring-[#ffffff20] border-blue-500 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full">
-                    <img src={Paper} alt="" />
+                  <div>
+                    {random === 13 ? (
+                      <div className="cursor-pointer border-blue-500 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full relative">
+                        <img src={Paper} alt="" />
+                        <div className="fixed h-[8em] w-[8em] ring-[6em] rounded-full ring-[#99999910]" />
+                        <div className="fixed h-[8em] w-[8em] ring-[4em] rounded-full ring-[#99999920]" />
+                        <div className="fixed h-[8em] w-[8em] ring-[2em] rounded-full ring-[#99999930]" />
+                      </div>
+                    ) : (
+                      <div className="cursor-pointer border-blue-500 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full">
+                        <img src={Paper} alt="" />
+                      </div>
+                    )}
                   </div>
                 )}
                 {choice === 12 && (
-                  <div className="hover:bg-gray-300 cursor-pointer hover:ring-[25px] hover:ring-[#ffffff20] border-yellow-500 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full">
-                    <img src={Scissors} alt="" />
+                  <div>
+                    {random === 11 ? (
+                      <div className="cursor-pointer border-yellow-500 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full relative">
+                        <img src={Scissors} alt="" />
+                        <div className="fixed h-[8em] w-[8em] ring-[6em] rounded-full ring-[#99999910]" />
+                        <div className="fixed h-[8em] w-[8em] ring-[4em] rounded-full ring-[#99999920]" />
+                        <div className="fixed h-[8em] w-[8em] ring-[2em] rounded-full ring-[#99999930]" />
+                      </div>
+                    ) : (
+                      <div className="cursor-pointer border-yellow-500 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full ">
+                        <img src={Scissors} alt="" />
+                      </div>
+                    )}
                   </div>
                 )}
                 {choice === 13 && (
-                  <div className="hover:bg-gray-300 cursor-pointer hover:ring-[25px] hover:ring-[#ffffff20] border-red-600 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full">
-                    <img src={Rock} alt="" />
+                  <div>
+                    {random === 12 ? (
+                      <div className="cursor-pointer border-red-600 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full relative">
+                        <img src={Rock} alt="" />
+                        <div className="fixed h-[8em] w-[8em] ring-[6em] rounded-full ring-[#99999910]" />
+                        <div className="fixed h-[8em] w-[8em] ring-[4em] rounded-full ring-[#99999920]" />
+                        <div className="fixed h-[8em] w-[8em] ring-[2em] rounded-full ring-[#99999930]" />
+                      </div>
+                    ) : (
+                      <div className="cursor-pointer border-red-600 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full">
+                        <img src={Rock} alt="" />
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
-              <div className="flex flex-col w-auto">
+              <div className="flex flex-col w-[50%] text-white justify-center items-center">
                 {random === 11 && (
                   <div>
                     {choice === 12 && (
-                      <div className="text-3xl text-center font-bold text-white">
+                      <div className="text-3xl text-center font-bold ">
                         YOU WIN
                       </div>
                     )}
                     {choice === 13 && (
-                      <div className="text-3xl text-center font-bold text-red-600">
+                      <div className="text-3xl text-center font-bold">
                         YOU LOSE
                       </div>
                     )}
                     {choice === 11 && (
-                      <div className="text-3xl text-center font-bold text-gray-700">
-                        DRAW
-                      </div>
+                      <div className="text-3xl text-center font-bold">DRAW</div>
                     )}
                     <div
                       className="bg-white text-center px-2 py-3 mt-6 rounded-lg text-blue-600 hover:text-red-600 hover:cursor-pointer"
@@ -127,19 +158,17 @@ function Classic() {
                 {random === 12 && (
                   <div>
                     {choice === 13 && (
-                      <div className="text-3xl text-center font-bold text-white">
+                      <div className="text-3xl text-center font-bold">
                         YOU WIN
                       </div>
                     )}
                     {choice === 11 && (
-                      <div className="text-3xl text-center font-bold text-red-600">
+                      <div className="text-3xl text-center font-bold">
                         YOU LOSE
                       </div>
                     )}
                     {choice === 12 && (
-                      <div className="text-3xl text-center font-bold text-gray-700">
-                        DRAW
-                      </div>
+                      <div className="text-3xl text-center font-bold">DRAW</div>
                     )}
                     <div
                       className="bg-white text-center px-2 py-3 mt-6 rounded-lg text-blue-600 hover:text-red-600 hover:cursor-pointer"
@@ -156,19 +185,17 @@ function Classic() {
                 {random === 13 && (
                   <div>
                     {choice === 11 && (
-                      <div className="text-3xl text-center font-bold text-white">
+                      <div className="text-3xl text-center font-bold">
                         YOU WIN
                       </div>
                     )}
                     {choice === 12 && (
-                      <div className="text-3xl text-center font-bold text-red-600">
+                      <div className="text-3xl text-center font-bold">
                         YOU LOSE
                       </div>
                     )}
                     {choice === 13 && (
-                      <div className="text-3xl text-center font-bold text-gray-700">
-                        DRAW
-                      </div>
+                      <div className="text-3xl text-center font-bold">DRAW</div>
                     )}
                     <div
                       className="bg-white text-center px-2 py-3 mt-6 rounded-lg text-blue-600 hover:text-red-600 hover:cursor-pointer"
@@ -186,18 +213,51 @@ function Classic() {
               <div className="flex flex-col items-center gap-5">
                 <div className="w-full text-center">THE HOUSE PICKED</div>
                 {random === 11 && (
-                  <div className="hover:bg-gray-300 cursor-pointer hover:ring-[25px] hover:ring-[#ffffff20] border-blue-500 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full">
-                    <img src={Paper} alt="" />
+                  <div>
+                    {choice === 13 ? (
+                      <div className="relative border-blue-500 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full ring-[2em] ring-[#99999930]">
+                        <img src={Paper} alt="" />
+                        <div className="fixed h-[8em] w-[8em] ring-[6em] rounded-full ring-[#99999910]" />
+                        <div className="fixed h-[8em] w-[8em] ring-[4em] rounded-full ring-[#99999920]" />
+                        <div className="fixed h-[8em] w-[8em] ring-[2em] rounded-full ring-[#99999930]" />
+                      </div>
+                    ) : (
+                      <div className="border-blue-500 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full">
+                        <img src={Paper} alt="" />
+                      </div>
+                    )}
                   </div>
                 )}
                 {random === 12 && (
-                  <div className="hover:bg-gray-300 cursor-pointer hover:ring-[25px] hover:ring-[#ffffff20] border-yellow-500 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full">
-                    <img src={Scissors} alt="" />
+                  <div>
+                    {choice === 11 ? (
+                      <div className="relative border-yellow-500 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full ">
+                        <img src={Scissors} alt="" />
+                        <div className="fixed h-[8em] w-[8em] ring-[6em] rounded-full ring-[#99999910]" />
+                        <div className="fixed h-[8em] w-[8em] ring-[4em] rounded-full ring-[#99999920]" />
+                        <div className="fixed h-[8em] w-[8em] ring-[2em] rounded-full ring-[#99999930]" />
+                      </div>
+                    ) : (
+                      <div className="border-yellow-500 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full">
+                        <img src={Scissors} alt="" />
+                      </div>
+                    )}
                   </div>
                 )}
                 {random === 13 && (
-                  <div className="hover:bg-gray-300 cursor-pointer hover:ring-[25px] hover:ring-[#ffffff20] border-red-600 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full">
-                    <img src={Rock} alt="" />
+                  <div>
+                    {choice === 12 ? (
+                      <div className="relative border-red-600 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full">
+                        <img src={Rock} alt="" />
+                        <div className="fixed h-[8em] w-[8em] ring-[6em] rounded-full ring-[#99999910]" />
+                        <div className="fixed h-[8em] w-[8em] ring-[4em] rounded-full ring-[#99999920]" />
+                        <div className="fixed h-[8em] w-[8em] ring-[2em] rounded-full ring-[#99999930]" />
+                      </div>
+                    ) : (
+                      <div className="border-red-600 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full">
+                        <img src={Rock} alt="" />
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
