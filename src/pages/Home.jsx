@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -17,7 +17,12 @@ function Home() {
           SCISSORS
         </div>
       </div>
-      <Navbar />
+      <Link
+        to={"/classic"}
+        className="relative bg-transparent px-5 py-3 text-white border-white border-2 rounded-xl mt-10 hover:border-white hover:bg-[#ffffff10] active:ring-[0.75em] active:ring-[#ffffff10]"
+      >
+        Play Game
+      </Link>
     </div>
   );
 }
