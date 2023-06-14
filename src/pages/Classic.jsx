@@ -32,20 +32,20 @@ function Classic() {
   return (
     <div className="font-montserrat h-screen w-screen ">
       <div className="h-full w-full z-0 flex flex-col justify-center items-center">
-        <div className="fixed top-10 w-[50%] h-[20%] flex items-center justify-between border-2 border-[#ffffff50] rounded-xl px-5 py-2">
+        <div className="fixed top-10 w-[80%] md:w-[50%] h-[15%] md:h-[20%] flex items-center justify-between border-2 border-[#ffffff50] rounded-xl px-5 py-2">
           <img src={Logo} alt="" className="h-[80%] object-contain" />
-          <div className="h-[100%] w-[20%] bg-white rounded-lg flex flex-col p-3 justify-center items-center">
+          <div className="h-[100%] w-[30%] md:w-[20%] bg-white rounded-lg flex flex-col p-3 justify-center items-center">
             <span className="text-sm text-blue-500 font-semibold">SCORE</span>
             <span className="text-gray-700 font-extrabold text-5xl">
               {score}
             </span>
           </div>
         </div>
-        <div className="w-auto relative  h-auto mt-36 flex justify-center items-center">
+        <div className="w-[60%] md:w-auto relative  h-auto mt-24 md:mt-36 flex justify-center items-center">
           {!choice && (
             <div className="w-auto">
               <div
-                className="absolute top-[-40px] hover:bg-gray-300 cursor-pointer left-[-40px] hover:ring-[25px] hover:ring-[#ffffff20] border-blue-500 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full"
+                className="absolute top-[-50px] md:top-[-40px] hover:bg-gray-300 cursor-pointer left-[-50px] md:left-[-40px] hover:ring-[25px] hover:ring-[#ffffff20] border-blue-500 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full"
                 onClick={() => {
                   setChoice(11);
                   getRandomChoice();
@@ -54,7 +54,7 @@ function Classic() {
                 <img src={Paper} alt="" />
               </div>
               <div
-                className="absolute top-[-40px] hover:bg-gray-300 cursor-pointer right-[-40px] hover:ring-[25px] hover:ring-[#ffffff20] border-yellow-500 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full"
+                className="absolute top-[-50px] md:top-[-40px] hover:bg-gray-300 cursor-pointer right-[-50px] md:right-[-40px] hover:ring-[25px] hover:ring-[#ffffff20] border-yellow-500 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full"
                 onClick={() => {
                   setChoice(12);
                   getRandomChoice();
@@ -63,7 +63,7 @@ function Classic() {
                 <img src={Scissors} alt="" />
               </div>
               <div
-                className="absolute bottom-[-40px] hover:bg-gray-300 cursor-pointer left-[90px] hover:ring-[25px] hover:ring-[#ffffff20] border-red-600 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full"
+                className="absolute bottom-[-50px] md:bottom-[-40px] hover:bg-gray-300 cursor-pointer left-[45px] md:left-[90px] hover:ring-[25px] hover:ring-[#ffffff20] border-red-600 border-[12px] bg-white h-[8em] w-[8em] flex justify-center items-center p-3 rounded-full"
                 onClick={() => {
                   setChoice(13);
                   getRandomChoice();
@@ -75,8 +75,8 @@ function Classic() {
             </div>
           )}
           {choice && (
-            <div className="flex gap-10 w-[50rem] justify-evenly">
-              <div className="flex flex-col items-center gap-5">
+            <div className="flex flex-col items-center md:flex-row mt-[-40px] md:mt-0 gap-5 md:gap-10 w-[50rem] justify-evenly">
+              <div className="flex flex-row md:flex-col items-center gap-5">
                 <div className="w-full text-center">YOU PICKED</div>
                 {choice === 11 && (
                   <div>
@@ -129,19 +129,21 @@ function Classic() {
               </div>
               <div className="flex flex-col w-[50%] text-white justify-center items-center">
                 {random === 11 && (
-                  <div>
+                  <div className="flex flex-row items-center justify-center gap-3 md:flex-col">
                     {choice === 12 && (
-                      <div className="text-3xl text-center font-bold ">
+                      <div className="text-xl md:text-3xl text-center font-bold ">
                         YOU WIN
                       </div>
                     )}
                     {choice === 13 && (
-                      <div className="text-3xl text-center font-bold">
+                      <div className="text-xl md:text-3xl text-center font-bold">
                         YOU LOSE
                       </div>
                     )}
                     {choice === 11 && (
-                      <div className="text-3xl text-center font-bold">DRAW</div>
+                      <div className="text-xl md:text-3xl text-center font-bold">
+                        DRAW
+                      </div>
                     )}
                     <div
                       className="bg-white text-center px-2 py-3 mt-6 rounded-lg text-blue-600 hover:text-red-600 hover:cursor-pointer"
@@ -156,19 +158,21 @@ function Classic() {
                   </div>
                 )}
                 {random === 12 && (
-                  <div>
+                  <div className="flex flex-col items-center justify-center gap-3 ">
                     {choice === 13 && (
-                      <div className="text-3xl text-center font-bold">
+                      <div className="text-xl md:text-3xl text-center font-bold">
                         YOU WIN
                       </div>
                     )}
                     {choice === 11 && (
-                      <div className="text-3xl text-center font-bold">
+                      <div className="text-xl md:text-3xl text-center font-bold">
                         YOU LOSE
                       </div>
                     )}
                     {choice === 12 && (
-                      <div className="text-3xl text-center font-bold">DRAW</div>
+                      <div className="text-xl md:text-3xl text-center font-bold">
+                        DRAW
+                      </div>
                     )}
                     <div
                       className="bg-white text-center px-2 py-3 mt-6 rounded-lg text-blue-600 hover:text-red-600 hover:cursor-pointer"
@@ -183,19 +187,21 @@ function Classic() {
                   </div>
                 )}
                 {random === 13 && (
-                  <div>
+                  <div className="flex flex-col items-center justify-center gap-3">
                     {choice === 11 && (
-                      <div className="text-3xl text-center font-bold">
+                      <div className="text-xl md:text-3xl text-center font-bold">
                         YOU WIN
                       </div>
                     )}
                     {choice === 12 && (
-                      <div className="text-3xl text-center font-bold">
+                      <div className="text-xl md:text-3xl text-center font-bold">
                         YOU LOSE
                       </div>
                     )}
                     {choice === 13 && (
-                      <div className="text-3xl text-center font-bold">DRAW</div>
+                      <div className="text-xl md:text-3xl text-center font-bold">
+                        DRAW
+                      </div>
                     )}
                     <div
                       className="bg-white text-center px-2 py-3 mt-6 rounded-lg text-blue-600 hover:text-red-600 hover:cursor-pointer"
@@ -210,7 +216,7 @@ function Classic() {
                   </div>
                 )}
               </div>
-              <div className="flex flex-col items-center gap-5">
+              <div className="flex flex-row md:flex-col items-center gap-5">
                 <div className="w-full text-center">THE HOUSE PICKED</div>
                 {random === 11 && (
                   <div>

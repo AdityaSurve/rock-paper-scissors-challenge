@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home, Mod, Classic } from "./pages";
+import { Home, Classic } from "./pages";
 
 function App() {
   return (
@@ -8,7 +8,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/classic" element={<Classic />} />
-          <Route path="/mod" element={<Mod />} />
         </Routes>
       </BrowserRouter>
     </div>
